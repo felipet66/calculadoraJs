@@ -6,8 +6,11 @@
     var $buttonsOperations = doc.querySelectorAll('[data-js="button-operation"]');
     var $buttonCE = doc.querySelector('[data-js="button-ce"]');
     var $buttonEqual = doc.querySelector('[data-js="button-equal"]');
+    var $anima = doc.querySelector('[data-js="animateFix"]');
+
 
     function initialize(){
+        initAnimation();
         initEvents();
     }
 
@@ -20,6 +23,10 @@
         });
         $buttonCE.addEventListener('click', handleClickCE, false);
         $buttonEqual.addEventListener('click', handleClickEqual, false);
+    }
+
+    function initAnimation(){
+        $anima.classList.add("dance");
     }
 
     function handleClickNumber() {
